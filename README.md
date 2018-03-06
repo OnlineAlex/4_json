@@ -1,4 +1,4 @@
-# Prettify JSON
+# Читабельный JSON
 
 Выводит содержимое `JSON файла` в консоль в удобном для чтения виде. С отступами, переносами и пробелами.
 
@@ -9,7 +9,7 @@
 [{"global_id":1699129,"DepartmentalAffiliation":"Департамент жилищно-коммунального хозяйства города Москвы","ID":1,"ClarificationOfWorkingHours":"Посещение (по согласованию с управляющим): ежедневно 12:00-16:00 кроме понедельника(санитарный день);  для желающих взять животное ежедневно 08:00-17:00","AdmArea":"Восточный административный округ","District":"район Вешняки",
 ```
 
-Вывод с помощью **Prettify JSON**
+Вывод с помощью **Читабельный JSON**
 
 ```json
 [
@@ -63,4 +63,4 @@ $ python pprint_json.py /home/Myhome/my_json_file.json
 
 # Project Goals
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - DEVMAN.org
