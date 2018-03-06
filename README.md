@@ -1,17 +1,65 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Выводит содержимое `JSON файла` в консоль в удобном для чтения виде. С отступами, переносами и пробелами.
 
-# Quickstart
+### Пример
 
-[TODO]
+Стандартный вывод:
+```json
+[{"global_id":1699129,"DepartmentalAffiliation":"Департамент жилищно-коммунального хозяйства города Москвы","ID":1,"ClarificationOfWorkingHours":"Посещение (по согласованию с управляющим): ежедневно 12:00-16:00 кроме понедельника(санитарный день);  для желающих взять животное ежедневно 08:00-17:00","AdmArea":"Восточный административный округ","District":"район Вешняки",
+```
 
-Example of script launch on Linux, Python 3.5:
+Вывод с помощью **Prettify JSON**
+
+```json
+[
+    {
+        "global_id": 1699129,
+        "DepartmentalAffiliation": "Департамент жилищно-коммунального хозяйства города Москвы",
+        "ID": 1,
+        "ClarificationOfWorkingHours": "Посещение (по согласованию с управляющим): ежедневно 12:00-16:00 кроме понедельника(санитарный день);  для желающих взять животное ежедневно 08:00-17:00",
+        "AdmArea": "Восточный административный округ",
+        "District": "район Вешняки",
+        ...
+```
+
+# Требования
+
+Совестимые OC:
+* Linux,
+* Windows
+
+Рекомендованная версия **Python 3.5** и выше
+
+Файл должен быть в формате `.json`
+# Как запустить
+
+Пример запуска на Linux с Python 3.5:
 
 ```bash
 
-$ python pprint_json.py <path to file>
-# TODO add output example
+$ python pprint_json.py <путь к файлу>
+
+{
+    "name": "Вася",
+    "age": 25,
+    "roles": {
+        "isAdmin": false,
+        "isEditor": true
+    }
+}
+```
+
+Запуск на Windows производится аналогичным образом
+
+> Если файл не находится в одном каталоге с модулем `pprint_json` передавайте полный путь к файлу в качестве аргумента
+```bash
+
+#Linux
+$ python pprint_json.py /home/Myhome/my_json_file.json
+
+#Windows
+> python pprint_json.py C:\Myfile\my_json_file.json
 
 ```
 
