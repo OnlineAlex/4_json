@@ -61,6 +61,6 @@ $ python pprint_json.py /home/Myhome/my_json_file.json
 
 ```
 
-# Project Goals
+# Цели проекта
 
-Код создан в учебных целях. В рамках учебного курса по веб-разработке - DEVMAN.org
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
