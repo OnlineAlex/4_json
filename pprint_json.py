@@ -11,9 +11,9 @@ def pretty_print_json(json_str):
     try:
         parsed_str = json.loads(json_str)
     except ValueError:
-        return 'Ошибка. Файл должен біть в формате JSON'
+        print('Ошибка. Файл должен быть в формате JSON')
 
-    return json.dumps(parsed_str, ensure_ascii=False, indent=4)
+    print(json.dumps(parsed_str, ensure_ascii=False, indent=4))
 
 
 if __name__ == '__main__':
@@ -27,4 +27,4 @@ if __name__ == '__main__':
         print('Ошибка! Система не нашла такой файл.')
         print('Пробуйте указать полный путь к файлу.')
     else:
-        print(pretty_print_json(json_data))
+        pretty_print_json(json_data)
