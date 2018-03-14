@@ -4,16 +4,13 @@ import sys
 
 def load_data(filepath):
     with open(filepath, 'r') as file:
-        return file.read()
+        parsed_json = json.loads(file.read())
+        return parsed_json
 
 
-def pretty_print_json(json_str):
-    try:
-        parsed_str = json.loads(json_str)
-    except ValueError:
-        return 'Ошибка. Файл должен біть в формате JSON'
-
-    return json.dumps(parsed_str, ensure_ascii=False, indent=4)
+def pretty_print_json(raw_json):
+    pretty_json = json.dumps(raw_json, ensure_ascii=False, indent=4)
+    return print(pretty_json)
 
 
 if __name__ == '__main__':
@@ -26,5 +23,7 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print('Ошибка! Система не нашла такой файл.')
         print('Пробуйте указать полный путь к файлу.')
+    except ValueError:
+        print('Ошибка. Файл должен быть в формате JSON.')
     else:
-        print(pretty_print_json(json_data))
+        pretty_print_json(json_data)
